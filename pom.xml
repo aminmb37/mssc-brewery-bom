@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.amin.beerworks</groupId>
+    <groupId>com.github.aminmb37.beerworks</groupId>
     <artifactId>mssc-brewery-bom</artifactId>
     <version>1.0</version>
 
