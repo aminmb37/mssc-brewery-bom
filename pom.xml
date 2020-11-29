@@ -11,7 +11,7 @@
 
     <groupId>com.github.aminmb37.beerworks</groupId>
     <artifactId>mssc-brewery-bom</artifactId>
-    <version>1.6-SNAPSHOT</version>
+    <version>1.6</version>
 
     <packaging>pom</packaging>
 
@@ -331,7 +331,7 @@
         <connection>scm:git:git://github.com/aminmb37/mssc-brewery-bom.git</connection>
         <developerConnection>scm:git:git@github.com:aminmb37/aminmb37.git</developerConnection>
         <url>https://github.com/aminmb37/mssc-brewery-bom</url>
-        <tag>mssc-brewery-bom-1.5</tag>
+        <tag>mssc-brewery-bom-1.6</tag>
     </scm>
 
     <profiles>
