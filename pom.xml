@@ -143,7 +143,7 @@
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
-            <version>${jaxb-core.version}</version>
+            <version>${glassfish-jaxb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -331,7 +331,7 @@
         <connection>scm:git:git://github.com/aminmb37/mssc-brewery-bom.git</connection>
         <developerConnection>scm:git:git@github.com:aminmb37/aminmb37.git</developerConnection>
         <url>https://github.com/aminmb37/mssc-brewery-bom</url>
-        <tag>mssc-brewery-bom-1.6</tag>
+        <tag>mssc-brewery-bom-1.7</tag>
     </scm>
 
     <profiles>
