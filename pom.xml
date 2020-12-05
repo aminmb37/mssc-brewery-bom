@@ -43,6 +43,8 @@
         <jaxb-core.version>3.0.0</jaxb-core.version>
         <org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+        <docker.image.prefix>aminmb</docker.image.prefix>
+        <docker.image.name>${project.artifactId}</docker.image.name>
     </properties>
 
     <dependencyManagement>
@@ -164,6 +166,10 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                        <includeLayerTools>true</includeLayerTools>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.springframework.boot</groupId>
@@ -237,6 +243,32 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.34.1</version>
+                <configuration>
+                    <!--<dockerHost>http://127.0.0.1:2375/</dockerHost>-->
+                    <verbose>true</verbose>
+                    <images>
+                        <image>
+                            <name>${docker.image.prefix}/${docker.image.name}</name>
+                            <alias>${project.artifactId}</alias>
+                            <build>
+                                <!--copies artifact to docker build dir in target-->
+                                <assembly>
+                                    <descriptorRef>artifact</descriptorRef>
+                                </assembly>
+                                <dockerFile>Dockerfile</dockerFile>
+                                <tags>
+                                    <tag>latest</tag>
+                                    <tag>${project.version}</tag>
+                                </tags>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
@@ -331,7 +363,7 @@
         <connection>scm:git:git://github.com/aminmb37/mssc-brewery-bom.git</connection>
         <developerConnection>scm:git:git@github.com:aminmb37/aminmb37.git</developerConnection>
         <url>https://github.com/aminmb37/mssc-brewery-bom</url>
-        <tag>mssc-brewery-bom-1.7</tag>
+        <tag>mssc-brewery-bom-1.8</tag>
     </scm>
 
     <profiles>
