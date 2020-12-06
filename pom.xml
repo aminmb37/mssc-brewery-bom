@@ -341,7 +341,9 @@
                 <executions>
                     <execution>
                         <id>attach-javadoc</id>
-                        <goals />
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -363,7 +365,7 @@
         <connection>scm:git:git://github.com/aminmb37/mssc-brewery-bom.git</connection>
         <developerConnection>scm:git:git@github.com:aminmb37/aminmb37.git</developerConnection>
         <url>https://github.com/aminmb37/mssc-brewery-bom</url>
-        <tag>mssc-brewery-bom-1.8</tag>
+        <tag>mssc-brewery-bom-1.9</tag>
     </scm>
 
     <profiles>
