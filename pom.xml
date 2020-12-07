@@ -365,7 +365,7 @@
         <connection>scm:git:git://github.com/aminmb37/mssc-brewery-bom.git</connection>
         <developerConnection>scm:git:git@github.com:aminmb37/aminmb37.git</developerConnection>
         <url>https://github.com/aminmb37/mssc-brewery-bom</url>
-        <tag>mssc-brewery-bom-1.10</tag>
+        <tag>mssc-brewery-bom-1.11</tag>
     </scm>
 
     <profiles>
